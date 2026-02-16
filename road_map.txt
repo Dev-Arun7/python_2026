@@ -14,19 +14,24 @@ python-learning/
 │   input_output.py
 │   operators.py
 │   comments.py
+│   format_specifiers.py          
 │   keywords.py                   
+│   string_methods.py 
+|   arithmetic_operators.py            
 │
 ├── 02_conditions/
 │   if_else.py
 │   nested_if.py
 │   match_case.py
 │   ternary_operator.py           
+│   logical_operators.py        
 │
 ├── 03_loops/
 │   for_loop.py
 │   while_loop.py
 │   break_continue.py
 │   range.py
+│   nested_loops.py              
 │   pass_statement.py             
 │
 ├── 04_collections/
@@ -36,6 +41,7 @@ python-learning/
 │   dictionary.py
 │   list_comprehension.py
 │   dict_comprehension.py         
+│   two_d_collections.py         
 │
 ├── 05_functions/
 │   basic_functions.py
@@ -44,12 +50,14 @@ python-learning/
 │   lambda.py
 │   docstrings.py
 │   type_hints.py                 
+│   recursion.py                  
 │
 ├── 06_modules_packages/
 │   import_module.py
 │   create_module.py
 │   packages.py
 │   __name__main__.py             
+│   scope_resolution.py           
 │
 ├── 07_error_handling/
 │   try_except.py
@@ -75,6 +83,10 @@ python-learning/
 │   encapsulation.py
 │   magic_methods.py
 │   dataclasses.py                
+│   duck_typing.py                
+│   static_methods.py             
+│   class_methods.py              
+│   property_decorator.py         
 │
 ├── 10_intermediate_python/       
 │   decorators.py
@@ -92,6 +104,7 @@ python-learning/
 │   collections_module.py
 │   itertools.py                  
 │   functools.py                  
+│   random_module.py           
 │
 ├── 12_testing/
 │   unittest_basics.py
@@ -104,6 +117,7 @@ python-learning/
 │   crud_operations.py
 │   sqlalchemy_intro.py
 │   migrations_intro.md           
+│   indexing_basics.md           
 │
 ├── 14_api_calls/
 │   requests_get.py
@@ -121,6 +135,7 @@ python-learning/
 │   async_intro.py
 │   async_await.py
 │   aiohttp_example.py
+│   multithreading.py             
 │   concurrency_vs_parallel.md    
 │
 ├── 17_design_patterns/
