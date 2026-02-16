@@ -1,0 +1,159 @@
+python-learning/
+│
+├── 00_setup_environment/
+│   python_installation.md        
+│   vscode_setup.md               
+│   terminal_basics.md            
+│   venv_setup.md
+│   requirements.txt
+│
+├── 01_basics/
+│   variables.py
+│   data_types.py
+│   type_casting.py
+│   input_output.py
+│   operators.py
+│   comments.py
+│   keywords.py                   
+│
+├── 02_conditions/
+│   if_else.py
+│   nested_if.py
+│   match_case.py
+│   ternary_operator.py           
+│
+├── 03_loops/
+│   for_loop.py
+│   while_loop.py
+│   break_continue.py
+│   range.py
+│   pass_statement.py             
+│
+├── 04_collections/
+│   list.py
+│   tuple.py
+│   set.py
+│   dictionary.py
+│   list_comprehension.py
+│   dict_comprehension.py         
+│
+├── 05_functions/
+│   basic_functions.py
+│   arguments.py
+│   return_values.py
+│   lambda.py
+│   docstrings.py
+│   type_hints.py                 
+│
+├── 06_modules_packages/
+│   import_module.py
+│   create_module.py
+│   packages.py
+│   __name__main__.py             
+│
+├── 07_error_handling/
+│   try_except.py
+│   multiple_exceptions.py
+│   finally.py
+│   custom_exception.py
+│   logging_intro.py              
+│
+├── 08_file_handling/
+│   read_file.py
+│   write_file.py
+│   append_file.py
+│   with_statement.py
+│   json_files.py
+│   csv_files.py                  
+│
+├── 09_oop/
+│   class_object.py
+│   constructor.py
+│   methods.py
+│   inheritance.py
+│   polymorphism.py
+│   encapsulation.py
+│   magic_methods.py
+│   dataclasses.py                
+│
+├── 10_intermediate_python/       
+│   decorators.py
+│   generators.py
+│   iterators.py
+│   context_managers.py
+│   closures.py
+│   comprehensions_advanced.py    
+│
+├── 11_standard_library/
+│   datetime_module.py
+│   os_module.py
+│   sys_module.py
+│   pathlib.py
+│   collections_module.py
+│   itertools.py                  
+│   functools.py                  
+│
+├── 12_testing/
+│   unittest_basics.py
+│   pytest_basics.py
+│   mocking.py
+│   test_project_structure.md     
+│
+├── 13_database/
+│   sqlite_basics.py
+│   crud_operations.py
+│   sqlalchemy_intro.py
+│   migrations_intro.md           
+│
+├── 14_api_calls/
+│   requests_get.py
+│   requests_post.py
+│   api_project.py
+│   authentication_tokens.py      
+│
+├── 15_cli_apps/
+│   argparse_example.py
+│   click_example.py
+│   cli_project.py
+│   packaging_cli.md              
+│
+├── 16_async_python/
+│   async_intro.py
+│   async_await.py
+│   aiohttp_example.py
+│   concurrency_vs_parallel.md    
+│
+├── 17_design_patterns/
+│   singleton.py
+│   factory.py
+│   strategy.py
+│   observer.py
+│   dependency_injection.py       
+│
+├── 18_performance/
+│   profiling.py
+│   memory_usage.py
+│   optimization.py
+│   caching.py                    
+│
+├── 19_security_basics/            
+│   hashing.py
+│   environment_variables.py
+│   secrets_management.md
+│
+├── 20_packaging_distribution/     
+│   setup_py_intro.py
+│   pyproject_toml.md
+│   build_package.md
+│
+├── 21_projects/
+│   calculator_cli.py
+│   todo_cli.py
+│   file_organizer.py
+│   log_analyzer.py
+│   api_fetcher.py
+│   automation_script.py
+│   mini_web_scraper.py           
+│   mini_rest_api.py              
+│
+└── README.md
