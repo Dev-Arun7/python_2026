@@ -51,6 +51,8 @@ print("\nJoined text:", joined_text)
 # 7) find()
 # ----------------------------
 print("\nPosition of 'python':", text.find("python"))
+# python will return the index of occurance
+# python will return "-1" if it couldn't find the match
 
 
 # ----------------------------
@@ -89,8 +91,15 @@ print("\nCapitalize:", name.capitalize())
 print("Title case:", name.title())
 
 
+# --------------------------------------------------------
+# 12) find length   (Include white space as well)
+# --------------------------------------------------------
+name = "arun balakrishnan"
+result = len(name)
+print(f"Length of name: {result}")
+
 # ----------------------------
-# 12) TODO Practice
+#  TODO Practice
 # ----------------------------
 # TODO:
 # Create a variable city = "mumbai india"
