@@ -1,5 +1,9 @@
-credit_number = "1234-5678-9087-3456"
+import time
 
+print("Loading", end="")
 
-# Print the numbers in reverse order
-print(credit_number[::-2])
+for i in range(5):
+    print(".", end="", flush=True)
+    time.sleep(1)
+
+print("\nLoaded successfully ✅")
