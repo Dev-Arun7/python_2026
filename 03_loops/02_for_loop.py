@@ -88,3 +88,21 @@ for x in phone_number:
     if not x.isdigit():
         print("Invalid number ❌ — non digit character found")
         break   # stop after first invalid character
+
+
+# --------------------------------------------------
+# Example 6: for...else
+# else runs ONLY if loop does NOT hit break
+# --------------------------------------------------
+
+print("\nCheck if the number contains 0:\n")
+
+number = "965267821"   # Try changing this to include 0
+
+for digit in number:
+    if digit == "0":
+        print("The number contains 0 🔎")
+        break
+else:
+    # Runs only if loop completes without break
+    print("The number does NOT contain 0 ✅")
