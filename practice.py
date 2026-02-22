@@ -1,9 +1,5 @@
-import time
+fruits = ["apple", "mango", "orange", "grape", "banana"]
 
-print("Loading", end="")
+print(dir(fruits))
 
-for i in range(5):
-    print(".", end="", flush=True)
-    time.sleep(1)
-
-print("\nLoaded successfully ✅")
+print(help(fruits))
