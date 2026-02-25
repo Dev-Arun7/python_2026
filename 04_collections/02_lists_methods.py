@@ -3,115 +3,123 @@
 LISTS (COMMON METHODS)
 --------------------------------------------------
 
-This file focuses on common list methods:
-- append, insert, extend
-- pop, remove, clear
-- index, count
-- sort, reverse
-- copy
+This file explains common list methods:
+
+append()   → Add value at end
+insert()   → Add value at specific index
+extend()   → Add multiple values
+pop()      → Remove last (or specific index)
+remove()   → Remove by value
+index()    → Find position of value
+count()    → Count occurrences
+sort()     → Sort list
+reverse()  → Reverse list
+copy()     → Create copy
+clear()    → Remove all items
 
 Important:
-Some methods MODIFY the original list in-place.
-So we often use a fresh list for each example.
+Most list methods MODIFY the original list.
 """
 
-
-def print_state(title: str, items: list[str]) -> None:
-    """Helper function to print list neatly."""
-    print(f"{title}: {items}")
-
-
 # --------------------------------------------------
-# Starting list
+# Starting List
 # --------------------------------------------------
 
 fruits = ["apple", "mango", "orange", "grape", "banana"]
-print_state("\nOriginal", fruits)
+
+print("\nOriginal list:")
+print(fruits)
 
 
 # --------------------------------------------------
-# Add items
+# ADDING ITEMS
 # --------------------------------------------------
 
-# append() → add at the end
+# append() → add at end
 fruits.append("kiwi")
-print_state("After append('kiwi')", fruits)
+print("\nAfter append('kiwi'):")
+print(fruits)
 
-# insert(index, value) → add at a specific position
+# insert(index, value)
 fruits.insert(2, "strawberry")
-print_state("After insert(2, 'strawberry')", fruits)
+print("\nAfter insert(2, 'strawberry'):")
+print(fruits)
 
-# extend(list) → add multiple items
+# extend() → add multiple values
 more_fruits = ["papaya", "watermelon"]
 fruits.extend(more_fruits)
-print_state("After extend([...])", fruits)
+print("\nAfter extend([...]):")
+print(fruits)
 
 
 # --------------------------------------------------
-# Remove items
+# REMOVING ITEMS
 # --------------------------------------------------
 
-# pop() → removes and returns last item (or item at index)
-last_item = fruits.pop()
-print("\nRemoved using pop():", last_item)
-print_state("After pop()", fruits)
+# pop() → removes last item
+removed_item = fruits.pop()
+print("\nRemoved using pop():", removed_item)
+print("List now:", fruits)
 
-second_item = fruits.pop(1)
-print("Removed using pop(1):", second_item)
-print_state("After pop(1)", fruits)
+# pop(index) removing value in first (1) index
+removed_item = fruits.pop(1)
+print("\nRemoved using pop(1):", removed_item)
+print("List now:", fruits)
 
-# remove(value) → removes first matching value
-# If the value is not present, it throws ValueError
+# remove(value)
 if "mango" in fruits:
     fruits.remove("mango")
-print_state("After remove('mango')", fruits)
+
+print("\nAfter remove('mango'):")
+print(fruits)
 
 
 # --------------------------------------------------
-# Find information
+# FINDING INFORMATION
 # --------------------------------------------------
 
-# index(value) → returns index of first match (ValueError if not found)
+# index(value)
 if "banana" in fruits:
     print("\nIndex of 'banana':", fruits.index("banana"))
 else:
-    print("\n'banana' not found, cannot use index() safely")
+    print("\nBanana not found")
 
-# count(value) → how many times a value appears
-# NOTE: your earlier code had "banana " (with a space) which would not match "banana"
+# count(value)
 print("Count of 'apple':", fruits.count("apple"))
 
 
 # --------------------------------------------------
-# Sorting and reversing
+# SORTING & REVERSING
 # --------------------------------------------------
 
-# sort() sorts the list in-place
 fruits.sort()
-print_state("\nAfter sort()", fruits)
+print("\nAfter sort():")
+print(fruits)
 
-# reverse() reverses in-place
 fruits.reverse()
-print_state("After reverse()", fruits)
+print("\nAfter reverse():")
+print(fruits)
 
 
 # --------------------------------------------------
-# Copying
+# COPYING
 # --------------------------------------------------
 
-# copy() creates a new list (shallow copy)
 fruits_copy = fruits.copy()
-print_state("\nCopy created", fruits_copy)
+print("\nCopied list:")
+print(fruits_copy)
 
-# Modifying copy does not change original
 fruits_copy.append("dragonfruit")
-print_state("After modifying copy", fruits_copy)
-print_state("Original remains", fruits)
+
+print("\nAfter modifying copy:")
+print("Copy:", fruits_copy)
+print("Original:", fruits)
 
 
 # --------------------------------------------------
-# Clear the list
+# CLEAR LIST
 # --------------------------------------------------
 
 fruits.clear()
-print_state("\nAfter clear()", fruits)
+print("\nAfter clear():")
+print(fruits)
