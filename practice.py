@@ -1,77 +1,52 @@
-"""
-A simple concession stand program.
-User selects items from menu.
-Program calculates total cost.
-"""
+import pandas as pd
+import requests
+import csv
 
-# ----------------------------------------
-# Menu (dictionary: item -> price)
-# ----------------------------------------
+excel_file = '/home/arun/Downloads/File_Inventory.xlsx'
+report_file = '/home/arun/Downloads/url_test_report.csv'
 
-menu = {
-    "hot dog": 2.50,
-    "burger": 3.50,
-    "fries": 1.50,
-    "soda": 1.00,
-    "popcorn": 5.00,
-    "candy": 2.00,
-    "nachos": 4.00
-}
+BASE_URL = 'https://webapi-static-fast.s3.amazonaws.com/product_document/'
+base_path_prefix = '/home/vinod/Downloads/Organized_Compliance_Docs_2026_2/'
 
-cart = []          # List to store selected items
-total_cost = 0.0   # Variable to store total cost
+df = pd.read_excel(excel_file)
 
-# ----------------------------------------
-# Display Menu
-# ----------------------------------------
+# Skip icon rows
+df = df[df['subfolder'] != 'icon']
 
-print("Welcome to the Concession Stand! 🍔")
-print("\n----------- MENU -----------")
+rows = []
+total = len(df)
 
-for item, price in menu.items():
-    print(f"{item:10} : ${price:.2f}")
+for i, (_, row) in enumerate(df.iterrows(), 1):
+    product_code = row['product_code']
+    subfolder    = row['subfolder']
+    filename     = row['filename']
+    full_path    = row['full_path']
 
-print("-----------------------------")
+    relative_url = str(full_path).replace(base_path_prefix, '')
+    full_url     = BASE_URL + relative_url
 
-# ----------------------------------------
-# Take User Orders
-# ----------------------------------------
-
-while True:
-    food = input("Enter item name (Q to quit): ").lower()
-
-    if food == "q":
-        break
-
-    elif food in menu:
-        cart.append(food)
-
+    if str(subfolder).startswith('6-Sided-Packaging'):
+        url_type = '6-Sided'
+    elif str(subfolder).startswith('US/Amazon/'):
+        url_type = 'Carousel'
+    elif 'MSDS' in str(subfolder):
+        url_type = 'MSDS'
+    elif 'DG' in str(subfolder):
+        url_type = 'DG'
     else:
-        print("Item not found ❌ Try again.")
+        continue
 
+    try:
+        status = requests.get(full_url, timeout=10).status_code
+    except Exception as e:
+        status = f"ERROR: {str(e)}"
 
-# ----------------------------------------
-# Calculate Total Cost
-# ----------------------------------------
+    print(f"[{i}/{total}] {product_code} | {url_type} | {status} | {filename}")
+    rows.append([product_code, url_type, filename, full_url, status])
 
-# Finding the total
-for item in cart:
-    total_cost += menu[item]   
+with open(report_file, 'w', newline='') as f:
+    writer = csv.writer(f)
+    writer.writerow(['product_code', 'type', 'filename', 'url', 'status'])
+    writer.writerows(rows)
 
-
-# ----------------------------------------
-# Show Cart
-# ----------------------------------------
-
-print("\n----------- YOUR CART -----------")
-
-if len(cart) == 0:
-    print("Your cart is empty.")
-else:
-    for item in cart:
-        print(f"{item:10} : ${menu[item]:.2f}")
-
-    print("-------------------------------")
-    print(f"Total Cost : ${total_cost:.2f}")
-
-print("\nThank you! 😊")
+print(f"\nReport saved to {report_file}")
