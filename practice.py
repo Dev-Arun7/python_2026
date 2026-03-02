@@ -1,52 +1,91 @@
-import pandas as pd
-import requests
-import csv
+"""
+--------------------------------------------------
+INNER FUNCTIONS, LOCAL & GLOBAL VARIABLES
+--------------------------------------------------
+"""
 
-excel_file = '/home/arun/Downloads/File_Inventory.xlsx'
-report_file = '/home/arun/Downloads/url_test_report.csv'
+# --------------------------------------------------
+# GLOBAL VARIABLE
+# --------------------------------------------------
 
-BASE_URL = 'https://webapi-static-fast.s3.amazonaws.com/product_document/'
-base_path_prefix = '/home/vinod/Downloads/Organized_Compliance_Docs_2026_2/'
+message = "I am Global"
 
-df = pd.read_excel(excel_file)
+print("Global variable outside function:", message)
 
-# Skip icon rows
-df = df[df['subfolder'] != 'icon']
 
-rows = []
-total = len(df)
+# --------------------------------------------------
+# FUNCTION WITH LOCAL VARIABLE
+# --------------------------------------------------
 
-for i, (_, row) in enumerate(df.iterrows(), 1):
-    product_code = row['product_code']
-    subfolder    = row['subfolder']
-    filename     = row['filename']
-    full_path    = row['full_path']
+def show_message():
+    # This is a LOCAL variable
+    message = "I am Local"
+    print("Inside function (Local):", message)
 
-    relative_url = str(full_path).replace(base_path_prefix, '')
-    full_url     = BASE_URL + relative_url
 
-    if str(subfolder).startswith('6-Sided-Packaging'):
-        url_type = '6-Sided'
-    elif str(subfolder).startswith('US/Amazon/'):
-        url_type = 'Carousel'
-    elif 'MSDS' in str(subfolder):
-        url_type = 'MSDS'
-    elif 'DG' in str(subfolder):
-        url_type = 'DG'
-    else:
-        continue
+show_message()
 
-    try:
-        status = requests.get(full_url, timeout=10).status_code
-    except Exception as e:
-        status = f"ERROR: {str(e)}"
+# Global variable remains unchanged
+print("After function call:", message)
 
-    print(f"[{i}/{total}] {product_code} | {url_type} | {status} | {filename}")
-    rows.append([product_code, url_type, filename, full_url, status])
 
-with open(report_file, 'w', newline='') as f:
-    writer = csv.writer(f)
-    writer.writerow(['product_code', 'type', 'filename', 'url', 'status'])
-    writer.writerows(rows)
+print("\n" + "-" * 60)
 
-print(f"\nReport saved to {report_file}")
+
+# --------------------------------------------------
+# USING GLOBAL KEYWORD
+# --------------------------------------------------
+
+count = 0  # Global variable
+
+def increase_count():
+    global count   # Tell Python to use global variable
+    count += 1
+    print("Inside function, count =", count)
+
+
+increase_count()
+increase_count()
+
+print("Outside function, count =", count)
+
+
+print("\n" + "-" * 60)
+
+
+# --------------------------------------------------
+# INNER FUNCTION (Function inside function)
+# --------------------------------------------------
+
+def outer_function(name):
+
+    print("Outer function started")
+
+    # Inner function
+    def inner_function():
+        print("Hello", name)   # Accessing outer variable
+
+    inner_function()  # Calling inner function
+
+    print("Outer function finished")
+
+
+outer_function("Arun")
+
+
+print("\n" + "-" * 60)
+
+
+# --------------------------------------------------
+# Example Showing Local Scope
+# --------------------------------------------------
+
+def test_scope():
+    local_var = 100
+    print("Inside function:", local_var)
+
+test_scope()
+
+# This will give error if uncommented
+# print(local_var)
+# ❌ NameError: local_var is not defined
