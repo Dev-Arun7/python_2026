@@ -64,17 +64,9 @@ python-learning/
 │   multiple_exceptions.py
 │   finally.py
 │   custom_exception.py
-│   logging_intro.py              
-│
-├── 08_file_handling/
-│   read_file.py
-│   write_file.py
-│   append_file.py
-│   with_statement.py
-│   json_files.py
-│   csv_files.py                  
-│
-├── 09_oop/
+│   logging_intro.py 
+|             
+├── 08_oop/
 │   class_object.py
 │   constructor.py
 │   methods.py
@@ -88,13 +80,20 @@ python-learning/
 │   class_methods.py              
 │   property_decorator.py         
 │
-├── 10_intermediate_python/       
+├── 09_intermediate_python/       
 │   decorators.py
 │   generators.py
 │   iterators.py
 │   context_managers.py
 │   closures.py
 │   comprehensions_advanced.py    
+│
+├── 10_file_handling/
+│   write_file.py
+│   append_file.py
+│   with_statement.py
+│   json_files.py
+│   csv_files.py                  
 │
 ├── 11_standard_library/
 │   datetime_module.py
