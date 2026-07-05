@@ -39,6 +39,8 @@ if is_student:
 else:
     print("The person is not a student.")
 
+# Here is_student is "True" so just below line will execute, and else statment won't execute.
+
 # TODO: Try checking is_employed same as student and print a message accordingly.
 
 

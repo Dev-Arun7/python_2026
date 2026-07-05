@@ -1,6 +1,7 @@
 # Madlibs game - a fun way to practice string concatenation and user input
 # The user will be prompted to enter various words (nouns, verbs, adjectives, etc.) 
 # and then those words will be inserted into a pre-defined story template to create a funny story.
+# Just run the code and play the game first, then try to make your own.
 
 # Get user input for the madlibs
 adjective1 = input("Enter an adjective: ")

@@ -4,9 +4,6 @@ Goal:
 - Understand % formatting
 - Learn .format() method
 - Learn f-strings (recommended)
-
-Run:
-python 01_basics/format_specifiers.py
 """
 
 # ----------------------------
@@ -50,6 +47,7 @@ print("Age: {1}, Name: {0}".format(name, age))
 # formatting float
 print("Price: {:.2f}".format(price))
 
+# I suggest you to ignore above formating since the best way it below. :)
 
 # ----------------------------
 # 4) f-strings (BEST & MODERN)
