@@ -1,15 +1,11 @@
 """
-File: 01_basics/comments.py
-Topic: Comments (Beginner)
+Topic: Comments 
 
 Goal:
 - Understand what comments are
 - Learn single-line comments
 - Learn multi-line comments
 - Understand why comments are useful
-
-Run:
-python 01_basics/comments.py
 """
 
 # ----------------------------

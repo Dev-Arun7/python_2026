@@ -1,14 +1,10 @@
 """
-File: 01_basics/data_types.py
 Topic: Data Types (Beginner)
 
 Goal:
 - Understand Python's basic data types
 - Learn how to check types using type()
 - Learn basic type conversion (casting)
-
-Run:
-python 01_basics/data_types.py
 """
 
 # ----------------------------
@@ -33,7 +29,7 @@ print(type(is_active))
 # ----------------------------
 # 2) Why types matter
 # ----------------------------
-# TODO: Uncomment this line and run to see the error
+# TODO: Uncomment below line and run to see the error
 # print(5 + "5")
 
 # ----------------------------

@@ -18,6 +18,7 @@ print(type(is_student))  # <class 'bool'>
 print(age)
 print(float(age)) # Convert int to float
 print(str(age))
+print(int(gpa))
 
 
 bool_value = bool(name)  # Non-empty string is always True

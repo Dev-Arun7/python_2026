@@ -1,6 +1,5 @@
 """
-File: 01_basics/variables.py
-Topic: Variables (Beginner)
+Topic: Variables 
 
 Goal:
 - Understand what a variable is in Python
@@ -11,9 +10,6 @@ You will learn:
 1) Creating variables
 2) Re-assigning variables
 3) Naming rules (quick intro)
-
-Run:
-python 01_basics/variables.py
 """
 
 # ----------------------------
@@ -28,7 +24,7 @@ print("Age:", age)
 # ----------------------------
 # 2) Re-assigning variables
 # ----------------------------
-age = 26
+age = 30   # Age is chaning here
 print("Updated age:", age)
 
 # ----------------------------
