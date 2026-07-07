@@ -86,7 +86,7 @@ phone_number = "123245%6789"
 
 for x in phone_number:
     if not x.isdigit():
-        print("Invalid number ❌ — non digit character found")
+        print(f"Invalid number ❌ — non digit character found   {x}")
         break   # stop after first invalid character
 
 
