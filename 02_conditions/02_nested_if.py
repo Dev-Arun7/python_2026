@@ -11,7 +11,7 @@ if age >= 18: # if age is greater than or equal to 18, then do the code below
         print("You can access alcahole!")
     else: # if the above condition is false, then do the code below
         print("Not enough money!")
-else: # if the above condition is false, then do the code below
+else: # if the above condition is false (first if condition), then do the code below
     print("You are too young to access alcahole!")
 
 # -----------------------------------------------------------------------------------
