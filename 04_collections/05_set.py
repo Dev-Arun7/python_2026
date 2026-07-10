@@ -24,7 +24,7 @@ Elements inside a set must be immutable
 fruits = {"apple", "orange", "grape", "banana"}
 
 print("\nOriginal set:")
-print(fruits)   # Note: Order may change every run
+print(fruits)   # Note: Order may change every run 
 
 
 # --------------------------------------------------
@@ -117,7 +117,7 @@ print(fruits)
 # Empty Set Initialization
 # --------------------------------------------------
 
-# {} creates empty dictionary, NOT set
+# {} creates empty dictionary, NOT set correct way is below
 cars = set()
 
 print("\nEmpty set created:")

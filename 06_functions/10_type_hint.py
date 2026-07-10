@@ -19,7 +19,7 @@ from typing import Union, List, Dict
 # --------------------------------------------------
 
 def add_numbers(a: int, b: int) -> int:
-    """Adds two integers and returns an integer."""
+    """Adds two integers and returns an integer."""  # Doc string
     return a + b
 
 
