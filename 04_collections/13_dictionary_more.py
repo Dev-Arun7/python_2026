@@ -97,3 +97,8 @@ print("\n--- Update ---")
 
 capitals.update({"Germany": "Berlin"})
 print("After update:", capitals)
+
+
+# Update can be used to update one or more than one key value pairs at onece.
+# Or can use another dictionary just like "extend" in list.
+# Learn more about if you're curious about it. :)

@@ -8,7 +8,8 @@ TUPLES — INTERMEDIATE
 # Packing
 # --------------------------------------------------
 
-colors = "red", "green", "blue"
+colors = "red", "green", "blue"  # This is a tuple (even though you didn't add any parathesis)
+                                 # Python does it for you.
 
 print("\nTuple packing:")
 print(colors)
@@ -18,7 +19,7 @@ print(colors)
 # Unpacking
 # --------------------------------------------------
 
-a, b, c = colors
+a, b, c = colors   # items inside the colors asigns automatically, respectively
 
 print("\nUnpacked values:")
 print(a, b, c)
