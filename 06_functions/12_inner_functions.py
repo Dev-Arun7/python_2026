@@ -74,7 +74,7 @@ inner_function()             # Now inner runs
 Explanation:
 ✔ outer function executes
 ✔ inner function is created
-✔ inner function is returned
+✔ inner function is returned and stored in the variable.
 ✔ inner function runs only when you call it
 """
 
