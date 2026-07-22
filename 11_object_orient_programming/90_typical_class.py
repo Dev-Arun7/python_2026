@@ -1,6 +1,8 @@
 import random
 
 
+
+
 # ==========================================================
 # Car Class
 # ----------------------------------------------------------
@@ -16,6 +18,7 @@ import random
 # - Accelerate
 # - Brake
 # - Show its status
+# This example python code shows how use class
 # ==========================================================
 class Car:
 
