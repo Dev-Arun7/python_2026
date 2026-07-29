@@ -51,7 +51,7 @@ class Car:
     pass
 
 Right now, this class does nothing.
-It is just a blueprint.
+It is just a blank blueprint.
 
 ---
 
