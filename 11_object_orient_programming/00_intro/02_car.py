@@ -17,7 +17,7 @@ We will use a Car example.
 # It defines what properties a car should have.
 
 class Car:
-    # Constructor
+    # Constructor  
     # __init__ is a special method called a constructor.
     # It runs automatically when a new object is created.
 
@@ -31,12 +31,11 @@ class Car:
 
 
 
-
 # ---------------------------------------------------
 # Step 2: Creating an Object
 
 # Creating our first car object
-car_1 = Car("Mustang", 2024, "white", True)   # I dont like a white car
+car_1 = Car("Mustang", 2024, "white", True)   # I dont like a white car 😁, so selling = True 
 
 
 # ---------------------------------------------------
@@ -107,5 +106,3 @@ print("\nProgram finished successfully 🚗")
 
 
 
-
-# Note: Got to folder "03_car" next
