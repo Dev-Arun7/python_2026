@@ -1,18 +1,18 @@
+age = 21
 
-# Reading input values from user.
+if age < 18:
+  # If block will execute here
+  result = 5 + 3
+  print("Minor")
+  print("something.....")
+  print(result)
+else:
+  # Esle block starts here
+  print("Adult")
+  age_year = age
+  print(age_year)
+  # code continue......
 
-name = input("Enter your name:")
-age = input("Enter your age:")
-int_age = int(age)
-weight = float(input("Weight ?"))  # Converting directly
 
-#--------------------------------
-# What is happening above
-# age = "33"
-# int_age = 33
-#--------------------------------
 
-# Result
-print(f"Hi {name} how's it going...., you're {age} year old now")
-print(type(int_age))
 
