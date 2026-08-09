@@ -56,4 +56,3 @@ for car in cars:
 
 
 
-# Note: Got to folder "04_car" next

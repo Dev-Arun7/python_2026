@@ -1,11 +1,18 @@
 
 class Car:
+    shop_name = "Auto Focus"
+    car_count = 0
+    car_id = 0
     def __init__(self, model, year, color, for_sale):
         self.model = model
         self.year = year
         self.color = color
         self.for_sale = for_sale
         self.running = False
+        Car.car_count += 1
+        Car.car_id += 1
+        self.id = Car.car_id
+        
 
     def drive(self):
         self.running = True
@@ -28,21 +35,11 @@ class Car:
 
 
 
-# creating object
-car1 = Car("mustang", 2022, "red", False)
-car2 = Car("Tata", 2019, "black", True)
-car3 = Car("Suzuki", 2025, "white", False)
-car4 = Car("Tayota", 2015, "blue", True)
-car5 = Car("BYD", 2021, "black", True)
+    def info(self):
+        print(f"car count:{self.id} / {self.car_count}")
+        print(f"{self.shop_name}")
+        print(f"car model: {self.model}")
+        print(f"year:   {self.year}")
+        print(f"color: {self.color}")
+        print(f"for sale: {'Yes' if self.for_sale else 'No'}")
 
-
-
-cars = [car1, car2, car3, car4, car5]
-
-for car in cars:
-    print("------------------------------")
-    print(f"model is: {car.model}")
-    if car.year > 2020:
-        print("It's a relatively new car....")
-    if car.for_sale:
-        print(f"{car.model} {car.year} is selling...!")
