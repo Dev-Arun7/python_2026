@@ -1,48 +1,26 @@
 
-class Car:
-    def __init__(self, model, year, color, for_sale):
-        self.model = model
-        self.year = year
-        self.color = color
-        self.for_sale = for_sale
-        self.running = False
 
-    def drive(self):
-        self.running = True
-        print(f"You are driving {self.model}")
+class Vehicle:
+    def start(self):
+        print("Start car..")
 
-    def check_selling(self):
-        if self.for_sale:
-            print(f"{self.model} is selling")
-        else:
-            print(f"{self.model} is not available")
+    def stop(self):
+        print("Stop car")
 
-    def check_new(self):
-        if self.year > 2020:
-            print(f"{self.model} is relatively new: ({self.year})")
-        else:
-            print(f"{self.model} is an old car: {self.year}")
+class Car(Vehicle):
+    def ac_on(self):
+        print("Ac on...")
 
-    def check_color(self):
-        print(f"{self.model} is a {self.color} car")
+    def ac_off(self):
+        print("AC off..")
+
+class sports_car(Car):
+    def reving(self):
+        print("Engine revinge....")
 
 
-
-# creating object
-car1 = Car("mustang", 2022, "red", False)
-car2 = Car("Tata", 2019, "black", True)
-car3 = Car("Suzuki", 2025, "white", False)
-car4 = Car("Tayota", 2015, "blue", True)
-car5 = Car("BYD", 2021, "black", True)
-
-
-
-cars = [car1, car2, car3, car4, car5]
-
-for car in cars:
-    print("------------------------------")
-    print(f"model is: {car.model}")
-    if car.year > 2020:
-        print("It's a relatively new car....")
-    if car.for_sale:
-        print(f"{car.model} {car.year} is selling...!")
+car1 = sports_car()
+car1.start()
+car1.stop()
+car1.ac_on()
+car1.reving()
