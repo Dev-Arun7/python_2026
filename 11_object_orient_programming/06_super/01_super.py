@@ -24,10 +24,7 @@ Circle, Square, and Triangle inherit from Shape.
 """
 
 
-# ---------------------------------------------------
 # Parent Class
-# ---------------------------------------------------
-
 class Shape:
 
     # Constructor
@@ -47,10 +44,7 @@ class Shape:
             print(f"It is {self.color} and not filled.")
 
 
-# ---------------------------------------------------
 # Circle Class
-# ---------------------------------------------------
-
 class Circle(Shape):
 
     # Constructor
@@ -77,10 +71,7 @@ class Circle(Shape):
         super().describe()
 
 
-# ---------------------------------------------------
 # Square Class
-# ---------------------------------------------------
-
 class Square(Shape):
 
     # Constructor
@@ -104,10 +95,7 @@ class Square(Shape):
         super().describe()
 
 
-# ---------------------------------------------------
 # Triangle Class
-# ---------------------------------------------------
-
 class Triangle(Shape):
 
     # Constructor
@@ -137,11 +125,7 @@ class Triangle(Shape):
 # ---------------------------------------------------
 
 # Creating a Circle object
-circle = Circle(
-    color="red",
-    is_filled=True,
-    radius=5
-)
+circle = Circle(color="red", is_filled=True, radius=5)
 
 
 # Creating a Square object
