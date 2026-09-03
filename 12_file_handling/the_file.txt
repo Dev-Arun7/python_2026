@@ -1,0 +1,4 @@
+this 
+is a sample text
+for python
+read file code

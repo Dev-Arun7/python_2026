@@ -56,7 +56,7 @@ while True:
 
 # Finding the total
 for item in cart:
-    total_cost += menu[item]   
+    total_cost += menu[item]
 
 
 # ----------------------------------------
