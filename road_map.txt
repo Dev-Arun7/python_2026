@@ -147,7 +147,7 @@ python-learning/
 ├── 18_performance/
 │   profiling.py
 │   memory_usage.py
-│   optimization.py
+│   optimization.py 
 │   caching.py                    
 │
 ├── 19_security_basics/            
